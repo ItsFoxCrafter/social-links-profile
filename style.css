@@ -7,9 +7,93 @@
     font-family: 'Inter';
 }
 
+:root {    
+    --Green: hsl(75, 94%, 57%);
+    --White: hsl(0, 0%, 100%);
+    --Grey-700: hsl(0, 0%, 20%);
+    --Grey-800: hsl(0, 0%, 12%);
+    --Grey-900: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--Grey-900);
+    color: var(--White);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .attribution { 
     font-size: 11px; text-align: center; 
 }
 .attribution a { 
     color: hsl(228, 45%, 44%); 
+}
+
+.content {
+   background-color: var(--Grey-800);
+   width: 55vh;
+   margin-top: 50px;
+   margin-bottom: 25px;
+   border-radius: 10px;
+}
+
+.content .info,
+.content .links {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.info img {
+    border-radius: 100px;
+    width: 70px;
+    margin: 20px;
+}
+
+.info h2 {
+    font-size: 1.3em;
+}
+
+.info p:first-of-type {
+    margin-top: 5px;
+    font-size: 0.8em;
+    color: var(--Green);
+}
+
+.info p:last-of-type {
+    margin-top: 20px;
+    font-size: 0.8em;
+}
+
+.links {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 0.8em;
+    color: var(--White);
+    background-color: var(--Grey-700);
+    padding: 10px;
+    border: 1px solid var(--Grey-700);
+    border-radius: 5px;
+    margin: 5px;
+    width: 80%;
+    transition: all 0.2s ease-in-out;
+}
+
+.links a:hover {
+    background-color: var(--Green);
+    color: var(--Grey-800);
+}
+
+.links a:active {
+    border: 1px solid var(--Green);
+    background-color: var(--Grey-800);
+    color: var(--Green);
 }
